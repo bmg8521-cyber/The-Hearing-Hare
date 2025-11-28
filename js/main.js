@@ -696,8 +696,6 @@ class HearingHare {
                        data-forum-genre="${post.genre}"
                        data-forum-content="${(post.content || 'Join the discussion about this topic and share your experiences with music and mental health.').replace(/"/g, '&quot;')}">💬 ${post.replies} replies</a>
                     <a href="javascript:void(0)">❤️ ${post.likes} likes</a>
-                    <a href="javascript:void(0)">Share</a>
-                    <a href="javascript:void(0)">Save</a>
                 </div>
             </div>
         `).join('');
@@ -863,8 +861,6 @@ class HearingHare {
                 <div class="forum-post-actions">
                     <a href="javascript:void(0)" onclick="hearingHare.addDiscussion(this)">💬 Add to Discussion</a>
                     <a href="javascript:void(0)">❤️ ${forum.likes} likes</a>
-                    <a href="javascript:void(0)">Share</a>
-                    <a href="javascript:void(0)">Save</a>
                 </div>
                 <div class="add-discussion-form">
                     <div class="form-group">
