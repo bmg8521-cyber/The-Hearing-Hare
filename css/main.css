@@ -72,6 +72,9 @@ body {
     color: var(--dark-gray);
     background-color: var(--bg-primary);
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -743,16 +746,44 @@ section {
 }
 
 /* Responsive Design */
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-xl);
+    }
+    
+    .genre-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .mood-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile landscape and small tablets */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
         gap: var(--spacing-base);
+        padding: var(--spacing-base) var(--spacing-lg);
+    }
+    
+    .nav-brand h1 {
+        font-size: var(--font-size-xl);
     }
     
     .nav-links {
         order: 3;
         width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-link {
+        padding: var(--spacing-sm) var(--spacing-base);
+        font-size: var(--font-size-sm);
     }
     
     .nav-actions {
@@ -775,18 +806,26 @@ section {
     
     .features-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
     }
     
     .genre-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-base);
     }
     
     .mood-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-base);
+    }
+    
+    .mood-card {
+        padding: var(--spacing-lg);
     }
     
     .footer-content {
         grid-template-columns: 1fr;
+        text-align: center;
     }
     
     .footer-links {
@@ -795,6 +834,12 @@ section {
     
     .forum-nav {
         flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .forum-tab {
+        width: 100%;
+        text-align: center;
     }
     
     .forum-post-header {
@@ -802,11 +847,42 @@ section {
         align-items: flex-start;
         gap: var(--spacing-sm);
     }
+    
+    .forum-post-actions {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .tab-content-wrapper {
+        padding-top: 140px;
+    }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
     .container {
         padding: 0 var(--spacing-base);
+    }
+    
+    .navbar {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .nav-brand h1 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .nav-brand .tagline {
+        font-size: var(--font-size-xs);
+    }
+    
+    .nav-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
     }
     
     .hero {
@@ -822,16 +898,60 @@ section {
         font-size: var(--font-size-base);
     }
     
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .section-description {
+        font-size: var(--font-size-sm);
+    }
+    
     .genre-grid {
         grid-template-columns: 1fr;
     }
     
+    .genre-card {
+        padding: var(--spacing-lg);
+    }
+    
     .mood-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-base);
+    }
+    
+    .mood-card {
+        padding: var(--spacing-base);
+        min-height: 60px;
     }
     
     .genre-tags {
         flex-direction: column;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .forum-creation-form {
+        padding: var(--spacing-base);
+    }
+    
+    .forum-post {
+        padding: var(--spacing-base);
+    }
+    
+    .forum-post-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .comment {
+        padding: var(--spacing-base);
+    }
+    
+    .tab-content-wrapper {
+        padding-top: 160px;
     }
 }
 
@@ -862,6 +982,30 @@ section {
         --secondary-color: #800080;
         --dark-gray: #000000;
         --medium-gray: #666666;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary,
+    .btn-secondary,
+    .genre-card,
+    .mood-card,
+    .forum-tab,
+    .nav-link,
+    .comment-reply-btn,
+    .comment-like-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        padding: var(--spacing-base) var(--spacing-lg);
+    }
+    
+    a,
+    button {
+        touch-action: manipulation;
     }
 }
 
