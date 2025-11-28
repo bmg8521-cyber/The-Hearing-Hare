@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hearing Hare - Mental Health Through Music</title>
+    <meta name="description" content="A community platform where music meets mental health. Discover how songs and lyrics can help your emotional wellbeing through genre-based forums and personalized recommendations.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Codystar:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>The Hearing Hare</h1>
+                <span class="tagline">Mental Health Through Music</span>
+            </div>
+            <div class="nav-links">
+                <a href="#info" class="nav-link active" data-tab="info">Info</a>
+                <a href="#suggestions" class="nav-link" data-tab="suggestions">Suggestions</a>
+                <a href="#forums" class="nav-link" data-tab="forums">Forums</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tab Content Container -->
+    <div class="tab-content-wrapper" style="padding-top: 120px;">
+        
+        <!-- Info Tab -->
+        <div id="info-tab" class="tab-content active">
+            <!-- Features Overview -->
+            <section class="features">
+                <div class="container">
+                    <h2 class="section-title">How The Hearing Hare Works</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎵</div>
+                            <h3>Genre Forums</h3>
+                            <p>Explore discussions organized by music genres. Share how different styles of music impact your mental health.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💭</div>
+                            <h3>Mood Tracking</h3>
+                            <p>Set your current emotional state and receive personalized song recommendations with helpful mental health advice.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📝</div>
+                            <h3>Lyric Discussions</h3>
+                            <p>Dive deep into specific lyrics and share how they resonate with your mental health journey.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🤝</div>
+                            <h3>Community Support</h3>
+                            <p>Build empathy and communication skills while supporting others in their mental wellness journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <div class="container">
+                    <h2 class="section-title">About The Hearing Hare</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>The Hearing Hare is more than just a music platform. It's a safe space where mental health and music intersect. Inspired by projects like The Unsent Project, we believe in the power of shared experiences and the therapeutic nature of music.</p>
+                            
+                            <h3>Our Mission</h3>
+                            <p>To foster meaningful connections between people through music while providing mental health support and resources. We believe that analyzing lyrics and sharing musical experiences can build empathy, improve communication skills, and provide comfort during difficult times.</p>
+                            
+                            <h3>How It Works</h3>
+                            <ul>
+                                <li>Connect your Spotify account for personalized recommendations</li>
+                                <li>Share your mood and receive curated song suggestions</li>
+                                <li>Participate in genre-based discussions</li>
+                                <li>Analyze lyrics and their impact on mental health</li>
+                                <li>Build a supportive community around music and wellness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Suggestions Tab -->
+        <div id="suggestions-tab" class="tab-content">
+            <!-- Genre Selection -->
+            <section id="genres" class="genre-section">
+                <div class="container">
+                    <h2 class="section-title">What About You?</h2>
+                    <p class="section-description">Select the genres that speak to you. We'll show you forums and discussions for those genres.</p>
+                    <div class="genre-grid" id="genre-grid">
+                        <!-- Genre cards will be populated by JavaScript -->
+                    </div>
+                    <div class="selected-genres" id="selected-genres" style="display: none;">
+                        <h3>Forums for Your Selected Genres</h3>
+                        <div class="genre-forums-list" id="genre-forums-list">
+                            <!-- Genre-specific forums will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mood Tracker -->
+            <section id="mood-tracker" class="mood-section">
+                <div class="container">
+                    <p class="section-description">Share your current mood and let us suggest music that can help, along with personalized mental health guidance.</p>
+                    
+                    <div class="mood-tracker">
+                        <div class="mood-selector">
+                            <h3>Select Your Current Mood</h3>
+                            <div class="mood-grid" id="mood-grid">
+                                <!-- Mood options will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="mood-details" id="mood-details" style="display: none;">
+                            <h3>Tell Us More</h3>
+                            <textarea id="mood-description" placeholder="What's on your mind? Share more about how you're feeling..."></textarea>
+                            <button class="btn-primary" id="get-recommendations">Get Personalized Recommendations</button>
+                        </div>
+                    </div>
+
+                    <div class="recommendations" id="recommendations" style="display: none;">
+                        <!-- Recommendations will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Forums Tab -->
+        <div id="forums-tab" class="tab-content">
+            <section id="forums" class="forums-section">
+                <div class="container">
+                    <h2 class="section-title">Community Forums</h2>
+                    <p class="section-description">Join discussions about how music impacts mental health. Share your experiences and learn from others.</p>
+                    
+                    <div class="create-forum-section">
+                        <button class="create-forum-btn" id="create-forum-btn">Create New Forum</button>
+                        <div class="forum-creation-form" id="forum-creation-form">
+                            <h4>Create a New Forum</h4>
+                            <div class="form-group">
+                                <label for="forum-title">Forum Title</label>
+                                <input type="text" id="forum-title" placeholder="e.g., How Classical Music Helps with Anxiety">
+                            </div>
+                            <div class="form-group">
+                                <label for="forum-genre">Genre</label>
+                                <select id="forum-genre">
+                                    <option value="">Select a genre...</option>
+                                    <option value="rock">Rock</option>
+                                    <option value="pop">Pop</option>
+                                    <option value="jazz">Jazz</option>
+                                    <option value="classical">Classical</option>
+                                    <option value="hip-hop">Hip-Hop</option>
+                                    <option value="electronic">Electronic</option>
+                                    <option value="indie">Indie</option>
+                                    <option value="folk">Folk</option>
+                                    <option value="r&b">R&B</option>
+                                    <option value="country">Country</option>
+                                    <option value="reggae">Reggae</option>
+                                    <option value="blues">Blues</option>
+                                    <option value="general">General Discussion</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="forum-description">Description</label>
+                                <textarea id="forum-description" rows="4" placeholder="Describe what this forum is about and how music has helped you..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="forum-author">Your Name</label>
+                                <input type="text" id="forum-author" placeholder="How would you like to be known in the community?">
+                            </div>
+                            <div style="display: flex; gap: 1rem;">
+                                <button class="btn-primary" id="submit-forum">Create Forum</button>
+                                <button class="btn-secondary" id="cancel-forum">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="forum-categories">
+                        <div class="forum-nav">
+                            <button class="forum-tab active" data-tab="recent">Recent Discussions</button>
+                            <button class="forum-tab" data-tab="genres">By Genre</button>
+                            <button class="forum-tab" data-tab="trending">Trending Topics</button>
+                        </div>
+                        
+                        <div class="forum-content" id="forum-content">
+                            <!-- Forum content will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>The Hearing Hare</h3>
+                    <p>Mental Health Through Music</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Hearing Hare. A safe space for music and mental health.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* Tab System Styles */
+.tab-content-wrapper {
+    min-height: calc(100vh - 120px);
+}
+
+.tab-content {
+    display: none;
+    min-height: 500px;
+}
+
+.tab-content.active {
+    display: block !important;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Update nav-link styles for tab behavior */
+.nav-link {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Ensure forum content is visible */
+#forums-tab {
+    width: 100%;
+}
+
+#forums-tab .forums-section {
+    display: block;
+    width: 100%;
+}

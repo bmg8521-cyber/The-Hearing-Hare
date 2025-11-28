@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Discussion - The Hearing Hare</title>
+    <meta name="description" content="Join the discussion about music and mental health in The Hearing Hare community.">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Codystar:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>The Hearing Hare</h1>
+                <span class="tagline">Mental Health Through Music</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#genres" class="nav-link">Genres</a>
+                <a href="../index.html#mood-tracker" class="nav-link">Mood Tracker</a>
+                <a href="../index.html#forums" class="nav-link active">Forums</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Forum Detail Section -->
+    <section class="forum-detail-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html#forums">← Back to Forums</a>
+            </div>
+            
+            <div class="forum-header" id="forum-header">
+                <!-- Forum title and info will be populated by JavaScript -->
+            </div>
+
+            <div class="add-comment-section">
+                <h3>Add Your Comment</h3>
+                <div class="comment-form">
+                    <div class="form-group">
+                        <label for="comment-text">Share your thoughts:</label>
+                        <textarea id="comment-text" rows="4" placeholder="How does this topic relate to your experience with music and mental health?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-author">Your name:</label>
+                        <input type="text" id="comment-author" placeholder="How would you like to be known in the community?">
+                    </div>
+                    <button class="btn-primary" id="add-comment-btn">Add Comment</button>
+                </div>
+            </div>
+
+            <div class="comments-section" id="comments-section">
+                <h3>Discussion</h3>
+                <div class="comments-list" id="comments-list">
+                    <!-- Comments will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>The Hearing Hare</h3>
+                    <p>Mental Health Through Music</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Hearing Hare. A safe space for music and mental health.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/forum-detail.js"></script>
+</body>
+</html>
