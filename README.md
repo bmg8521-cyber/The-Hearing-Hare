@@ -1,5 +1,8 @@
 # 🐰 The Hearing Hare
 
+Open with this link:
+https://bmg8521-cyber.github.io/The-Hearing-Hare/
+
 **Mental Health Through Music**
 
 A supportive online community platform where music meets mental wellness. Connect with others through genre-based forums, discover mood-based music recommendations, and share how songs impact your mental health journey.
